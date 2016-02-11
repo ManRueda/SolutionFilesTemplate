@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>SolutionFilesTemplate</Name>
+    <Description>SolutionFilesTemplate</Description>
+    <Icon>SolutionFilesTemplate.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>28a85d39-21e4-48e8-86f4-88ba1587e29e</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>SolutionFilesTemplate</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="ProjectTemplate.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Properties\AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true">Class1.cs</ProjectItem>
+      <Folder Name="SolutionFiles" TargetFolderName="SolutionFiles">
+        <ProjectItem ReplaceParameters="true" TargetFileName="TextFile2.txt">TextFile2.txt</ProjectItem>
+        <Folder Name="BuildDefinition" TargetFolderName="BuildDefinition">
+          <ProjectItem ReplaceParameters="true" TargetFileName="TextFile1.txt">TextFile1.txt</ProjectItem>
+        </Folder>
+      </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>SolutionFilesTemplateExtension, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c12dde7f2ce69017</Assembly>
+    <FullClassName>SolutionFilesTemplateExtension.Wizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
